@@ -235,7 +235,8 @@ test_quick :: proc(t:^testing.T){
 	if t != nil {rand.reset(t.seed)}
 
 	for &n in &array{
-		n = auto_cast rand.uint64() % (MAX_EL*MAX_EL)
+		//n = auto_cast rand.uint64() % (MAX_EL*MAX_EL)
+		n = rand.uint64()
 	}
 
 	stop_w :time.Stopwatch
@@ -255,7 +256,8 @@ test_merge :: proc(t:^testing.T){
 	if t != nil {rand.reset(t.seed)}
 
 	for &n in &array{
-		n = auto_cast rand.uint64() % (MAX_EL*MAX_EL)
+		//n = auto_cast rand.uint64() % (MAX_EL*MAX_EL)
+		n = rand.uint64()
 	}
 
 	//log.info("\nmerge:\n",array)
@@ -277,7 +279,8 @@ test_heap :: proc(t:^testing.T){
 	if t != nil {rand.reset(t.seed)}
 
 	for &n in &array{
-		n = auto_cast rand.uint64() % (MAX_EL*MAX_EL)
+		//n = auto_cast rand.uint64() % (MAX_EL*MAX_EL)
+		n = rand.uint64()
 	}
 
 	//log.info("\nheap:\n",array)
@@ -298,7 +301,8 @@ test_radix :: proc(t:^testing.T){
 	if t != nil {rand.reset(t.seed)}
 
 	for &n in &array{
-		n = auto_cast rand.uint64() % (MAX_EL*MAX_EL)
+		//n = auto_cast rand.uint64() % (MAX_EL*MAX_EL)
+		n = rand.uint64()
 	}
 
 	//log.info("\nradix:\n",array)
